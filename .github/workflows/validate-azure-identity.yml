@@ -27,4 +27,4 @@ jobs:
       run: |
         echo "Successfully authenticated as an environment automation identity!"
         echo "Checking visibility of the target resource group..."
-        az group show --name rg-hfd-healthops-dev --output table
+        az group show --name rg-hfd-healthops-dev --output json
