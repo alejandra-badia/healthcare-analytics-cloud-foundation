@@ -102,9 +102,9 @@ Focused on hands-on infrastructure building inside the Azure sandbox boundary, v
 | :--------------------: | :-------------------------: |
 | ![](images/07-virtual-network.png) | ![](images/08-storage-account.png) |
 
-| Data Container & Medallion Layout | Private Endpoint (Network Isolation) |
+| Private Endpoint (Network Isolation) | Data Container & Medallion Layout |
 | :----------------------------------: | :----------------------------------: |
-| ![](images/09-storage-container.png) | ![](images/10-private-endpoint.png) |
+| ![](images/10-private-endpoint.png) | ![](images/09-storage-container.png) |
 
 
 ## Sprint 3 — Bicep Decompilation, Naming Standardization, & Documentation Polish
