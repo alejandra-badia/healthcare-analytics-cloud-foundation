@@ -4,7 +4,6 @@ Enterprise Azure cloud foundation and end-to-end target state data architecture 
 
 This project demonstrates the design and implementation of a highly secure, governed, and cost-conscious Azure data foundation following modern enterprise cloud and analytics engineering practices. The solution establishes the networking, security, identity governance, and storage layer required to support high-scale, compliance-driven healthcare analytics workloads.
 
----
 
 ## Project Background
 **HealthFirst Diagnostics** (fictional) is establishing a secure and scalable Azure data landing zone to support the **Healthcare Operations Analytics Platform**—an enterprise solution designed to ingest batch laboratory operational telemetry, execute data transformations, and serve secure reporting, business intelligence, and advanced analytics.
@@ -13,7 +12,6 @@ The long-term platform roadmap centers on a modern **Decoupled Data Lakehouse** 
 
 The solution directly follows the Microsoft Cloud Adoption Framework (CAF) and Azure Well-Architected Framework (WAF) to ensure data-plane security and compliance with healthcare data processing standards.
 
----
 
 ## Solution Overview
 The implemented solution features:
@@ -24,7 +22,6 @@ The implemented solution features:
 - **Analytics Storage:** Serverless Azure Data Lake Storage Gen2 (ADLS Gen2) structured into a standardized multi-tier **Medallion Architecture** (Bronze/Silver/Gold)
 - **Cost & Data Lifecycle Management:** Tailored retention and automated tiering strategies to minimize cloud expenditure
 
----
 
 ## Project Scope
 
@@ -41,7 +38,6 @@ The implemented solution features:
 - **Real-Time Data Streams:** High-velocity streaming infrastructure (e.g., Event Hubs, Kafka, Fabric Real-Time Intelligence) as the current platform is optimized for scheduled batch loads
 - **Production Deployment & Large-Scale Infrastructure**
 
----
 
 ## Architecture Blueprints
 
