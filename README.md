@@ -54,7 +54,6 @@ The implemented solution features:
   - **Executive Visualization (Power BI):** Rich reporting dashboards utilizing **Direct Lake Mode** to stream data directly out of OneLake without copying or refreshing underlying datasets
   - **Predictive AI (Synapse Data Science):** Future expansion to train Machine Learning models utilizing curated historical Gold data features
 
----
 
 ## Sprint 0 — Project Initiation & Governance
 Focused on setting up project version control architecture, mapping agile timeline milestones, and finalizing corporate alignment documents to ensure the data lakehouse adheres to compliance and budgeting guardrails.
@@ -65,7 +64,6 @@ Focused on setting up project version control architecture, mapping agile timeli
 - Created the enterprise-wide Naming & Tagging standard to track data asset resource ownership
 - Engineered a Cloud Cost Optimization & Storage Lifecycle Management strategy to forecast and control future operational spend
 
----
 
 ## Sprint 1 — Identity Handshake & Workload Identity Federation (WIF)
 Focused on initializing local workspace architecture, establishing the central cloud landing zone identity, and configuring the secure, passwordless trust handshake with GitHub Actions to eliminate credential leaks.
@@ -75,7 +73,7 @@ Focused on initializing local workspace architecture, establishing the central c
 - Engineered passwordless authentication using **OpenID Connect (OIDC)** Federated Credentials within Entra ID, linking securely to target GitHub repository branches
 - Developed and verified a `validate-azure-identity.yml` GitHub Actions pipeline workflow to cryptographically test and prove the active cloud authentication handshake
 
-### Identity & Authentication Evidence
+### Identity & Authentication
 
 | App Registration Overview | Enterprise Application |
 | :-----------------------: | :--------------------: |
@@ -85,7 +83,6 @@ Focused on initializing local workspace architecture, establishing the central c
 | :---------------------------------: |
 | ![](images/03-federated-credential.png) |
 
----
 
 ## Sprint 2 — Portal Implementation, Medallion Layout, & Secure Networking
 Focused on hands-on infrastructure building inside the Azure sandbox boundary, verifying secure network isolation perimeters, constructing the core lakehouse layout, and exporting the active physical environment state.
@@ -98,8 +95,6 @@ Focused on hands-on infrastructure building inside the Azure sandbox boundary, v
 - Formulated a standard **Medallion Architecture directory structure** inside the container (`healthops-data`): `/1-bronze` (raw), `/2-silver` (cleansed), and `/3-gold` (curated)
 - Wrapped the storage account inside an explicit network firewall configured to **Deny by Default**, shifting public access entirely to a secure **Private Endpoint** (`pe-hfd-healthops-dev-blob`) mapped to an internal **Azure Private DNS Zone**
 - Generated a verbose **Azure Resource Manager (ARM) JSON blueprint** by exporting the complete active environment layout
-
-### Infrastructure & Storage Evidence
 
 | Resource Group | Resource Group Tags |
 | :------------: | :-----------------: |
