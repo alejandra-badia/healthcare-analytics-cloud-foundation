@@ -73,15 +73,11 @@ Focused on initializing local workspace architecture, establishing the central c
 - Engineered passwordless authentication using **OpenID Connect (OIDC)** Federated Credentials within Entra ID, linking securely to target GitHub repository branches
 - Developed and verified a `validate-azure-identity.yml` GitHub Actions pipeline workflow to cryptographically test and prove the active cloud authentication handshake
 
-### Identity & Authentication
+### Identity & Authentication Screenshots
 
-| App Registration Overview | Enterprise Application |
-| :-----------------------: | :--------------------: |
-| ![](images/01-app-registration-overview.png) | ![](images/02-enterprise-application.png) |
-
-| Federated Credential Configuration |
-| :---------------------------------: |
-| ![](images/03-federated-credential.png) |
+| App Registration Overview | Enterprise Application | Federated Credential Configuration |
+| :-----------------------: | :--------------------: | :--------------------------------: |
+| ![](images/01-app-registration-overview.png) | ![](images/02-enterprise-application.png) | ![](images/03-federated-credential.png) |
 
 
 ## Sprint 2 — Portal Implementation, Medallion Layout, & Secure Networking
@@ -96,23 +92,16 @@ Focused on hands-on infrastructure building inside the Azure sandbox boundary, v
 - Wrapped the storage account inside an explicit network firewall configured to **Deny by Default**, shifting public access entirely to a secure **Private Endpoint** (`pe-hfd-healthops-dev-blob`) mapped to an internal **Azure Private DNS Zone**
 - Generated a verbose **Azure Resource Manager (ARM) JSON blueprint** by exporting the complete active environment layout
 
-| Resource Group | Resource Group Tags |
-| :------------: | :-----------------: |
-| ![](images/04-resource-group.png) | ![](images/05-resource-group-tags.png) |
+### Administrative & Governance Layer (Resource Group Scope)
+| Resource Group Overview | Resource Group Tags | RBAC Contributor Assignment |
+| :---------------------: | :-----------------: | :-------------------------: |
+| ![](images/04-resource-group.png) | ![](images/05-resource-group-tags.png) | ![](images/06-rbac-assignment.png) |
 
-| RBAC Assignment | Virtual Network Setup |
-| :-------------: | :-------------------: |
-| ![](images/06-rbac-assignment.png) | ![](images/07-virtual-network.png) |
+### Network & Storage Infrastructure Layer
+| Virtual Network (VNet) | Storage Account (ADLS Gen2) | Data Container & Medallion Layout | Private Endpoint (Network Isolation) |
+| :--------------------: | :-------------------------: | :-------------------------------: | :----------------------------------: |
+| ![](images/07-virtual-network.png) | ![](images/08-storage-account.png) | ![](images/09-storage-container.png) | ![](images/10-private-endpoint.png) |
 
-| Storage Account Overview | Data Container & Medallion Structure |
-| :----------------------: | :-----------------------------------: |
-| ![](images/08-storage-account.png) | ![](images/09-storage-container.png) |
-
-| Private Endpoint Configuration |
-| :----------------------------: |
-| ![](images/10-private-endpoint.png) |
-
----
 
 ## Sprint 3 — Bicep Decompilation, Naming Standardization, & Documentation Polish
 Focused on transforming the exported cloud environment blueprint into automated Infrastructure as Code (IaC) configuration scripts, parameterizing deployment properties, and polishing high-level governance deliverables.
