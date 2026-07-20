@@ -73,7 +73,7 @@ Focused on initializing local workspace architecture, establishing the central c
 - Engineered passwordless authentication using **OpenID Connect (OIDC)** Federated Credentials within Entra ID, linking securely to target GitHub repository branches
 - Developed and verified a `validate-azure-identity.yml` GitHub Actions pipeline workflow to cryptographically test and prove the active cloud authentication handshake
 
-### Identity & Authentication Screenshots
+### Screenshots
 
 | App Registration Overview | Enterprise Application | Federated Credential Configuration |
 | :-----------------------: | :--------------------: | :--------------------------------: |
@@ -92,15 +92,19 @@ Focused on hands-on infrastructure building inside the Azure sandbox boundary, v
 - Wrapped the storage account inside an explicit network firewall configured to **Deny by Default**, shifting public access entirely to a secure **Private Endpoint** (`pe-hfd-healthops-dev-blob`) mapped to an internal **Azure Private DNS Zone**
 - Generated a verbose **Azure Resource Manager (ARM) JSON blueprint** by exporting the complete active environment layout
 
-### Administrative & Governance Layer (Resource Group Scope)
+### Administrative & Governance Layer (Resource Group Scope) Screenshots
 | Resource Group Overview | Resource Group Tags | RBAC Contributor Assignment |
 | :---------------------: | :-----------------: | :-------------------------: |
 | ![](images/04-resource-group.png) | ![](images/05-resource-group-tags.png) | ![](images/06-rbac-assignment.png) |
 
-### Network & Storage Infrastructure Layer
-| Virtual Network (VNet) | Storage Account (ADLS Gen2) | Data Container & Medallion Layout | Private Endpoint (Network Isolation) |
-| :--------------------: | :-------------------------: | :-------------------------------: | :----------------------------------: |
-| ![](images/07-virtual-network.png) | ![](images/08-storage-account.png) | ![](images/09-storage-container.png) | ![](images/10-private-endpoint.png) |
+### Network & Storage Infrastructure Layer Screenshots
+| Virtual Network (VNet) | Storage Account (ADLS Gen2) |
+| :--------------------: | :-------------------------: |
+| ![](images/07-virtual-network.png) | ![](images/08-storage-account.png) |
+
+| Data Container & Medallion Layout | Private Endpoint (Network Isolation) |
+| :----------------------------------: | :----------------------------------: |
+| ![](images/09-storage-container.png) | ![](images/10-private-endpoint.png) |
 
 
 ## Sprint 3 — Bicep Decompilation, Naming Standardization, & Documentation Polish
@@ -120,7 +124,6 @@ Focused on transforming the exported cloud environment blueprint into automated 
   - `cost-lifecycle-management.pdf`
   - `sprint-summary.pdf`
 
----
 
 ## Core Technologies
 
@@ -139,7 +142,6 @@ Focused on transforming the exported cloud environment blueprint into automated 
 - Synapse Data Engineering (Spark/Python Data Modeling)
 - Power BI (Direct Lake Data Ingestion Mode)
 
----
 
 ## Key Architecture Decisions (ADL Summary)
 - **Identity Primacy & Zero-Secret Strategy (ED-003):** Established Microsoft Entra ID integration and OpenID Connect (OIDC) Workload Identity Federation prior to provisioning cloud assets, eliminating long-lived credentials and client secrets within the repository.
@@ -149,7 +151,6 @@ Focused on transforming the exported cloud environment blueprint into automated 
 - **Cost-Optimized Batch Storage (ED-008):** Selected the Standard Performance tier with LRS replication for ADLS Gen2 to minimize cloud subscription consumption while fully supporting batch ingestion throughput.
 - **Iterative Infrastructure Engineering (ED-004):** Adopted a Portal-First design approach paired with reverse-engineered Bicep Infrastructure-as-Code blueprinting to systematically validate architecture patterns before automation.
 
----
 
 ## Future Enhancements & Strategic Roadmap
 The foundational layer delivers immediate architectural value while providing seamless compatibility for business intelligence scale:
