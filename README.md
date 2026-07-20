@@ -126,7 +126,6 @@ Focused on hands-on infrastructure building inside the Azure sandbox boundary, v
 - Wrapped the storage account inside an explicit network firewall configured to **Deny by Default**, shifting public access entirely to a secure **Private Endpoint** mapped to an internal **Azure Private DNS Zone**.
 - Generated a verbose **Azure Resource Manager (ARM) JSON blueprint** by exporting the complete active environment layout via the Azure Resource Export engine.
 
-### Evidence
 - **Resource Group:** `rg-hfd-healthops-dev`
 - **Virtual Network:** `vnet-hfd-healthops-dev`
 - **Storage Account:** `sthfdhealthopsdev`
@@ -145,11 +144,7 @@ Focused on hands-on infrastructure building inside the Azure sandbox boundary, v
 
 ![Storage Container](images/09-storage-container.png)
 
-![Medallion Architecture](images/10-medallion-structure.png)
-
-![Private Endpoint](images/11-private-endpoint.png)
-
-![Private DNS Zone](images/12-private-dns-zone.png)
+![Private Endpoint](images/10-private-endpoint.png)
 
 ---
 
@@ -161,7 +156,6 @@ Focused on transforming the exported cloud environment blueprint into automated 
 - Reverse-engineered the raw exported ARM JSON script to construct a reusable, fully parameterized **Bicep Infrastructure-as-Code** template asset (`main.bicep`).
 - Finalized and integrated core technical program documentation including the Project Charter, Solution Architecture Document (SAD), Architecture Decision Log (ADL), Naming & Tagging Standards, and Cloud Cost Lifecycle Management Framework.
 
-### Evidence
 - **Infrastructure Blueprint:** Standardized repository code resource file (`main.bicep`)
 - **Project Documentation Portfolio Library:**
   - `project-charter.pdf`
